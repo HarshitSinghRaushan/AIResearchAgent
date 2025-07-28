@@ -49,7 +49,7 @@ for prompt in sample_prompts:
         st.session_state.selected_prompt = prompt
 
 # 💬 Chat Title
-st.markdown("## 📚 Research-Gen Agentic Model 🤖")
+st.markdown("## 📚 Research-Gen Agentic Model ~ Jio Platforms Limited 🤖")
 st.write("Ask anything about research papers, summaries, citations, or academic insights!")
 
 # 🔍 Autofill input if a prompt is selected
