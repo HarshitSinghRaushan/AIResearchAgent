@@ -5,7 +5,7 @@ from research_agents import process_research_request  # Import function from bac
 
 # 🌟 Streamlit Page Config
 st.set_page_config(
-    page_title="Research Buddy 🤖",
+    page_title="Research-Gen Agentic Model",
     page_icon="📚",
     layout="wide"
 )
@@ -29,11 +29,11 @@ st.sidebar.title("💡 Need Inspiration?")
 st.sidebar.write("Try these research queries:")
 
 sample_prompts = [
-    "Give research papers related to emotion recognition using deep learning.",
-    "Find latest research papers on artificial intelligence.",
-    "How is deep learning used in medical imaging?",
-    "Generate an APA citation for 'Transformer Models in NLP' by J. Doe, 2022.",
-    "What are the ethical concerns in AI research?",
+    "Give the annual stock reports of Reliance Industries",
+    "Summarize the GDPR compliance checklist for RIL and JPL in AI Customer Service",
+    "What are the recent funding rounds and acquisitions in Generative AI industry sector in past 6 months.",
+    "Summarize the top 10 whitepapers relevant to Jio Platforms Limited for quick internal onboarding",
+    "Write a 2 page executive summary on the potential impact of agentic systems on business in next 5 years.",
 ]
 
 # ✅ Ensure session_state variables are initialized
@@ -49,7 +49,7 @@ for prompt in sample_prompts:
         st.session_state.selected_prompt = prompt
 
 # 💬 Chat Title
-st.markdown("## 📚 Research Buddy 🤖")
+st.markdown("## 📚 Research-Gen Agentic Model 🤖")
 st.write("Ask anything about research papers, summaries, citations, or academic insights!")
 
 # 🔍 Autofill input if a prompt is selected
@@ -106,7 +106,7 @@ if user_input:
         response_text = ""
         for word in response.split():
             response_text += word + " "
-            status.markdown(f"🤖 **Research Buddy:** {response_text}", unsafe_allow_html=True)
+            status.markdown(f"🤖 **Research:** {response_text}", unsafe_allow_html=True)
             time.sleep(0.05)
 
         # Format the final response
@@ -117,7 +117,7 @@ if user_input:
     
     # Display formatted response
     with st.chat_message("assistant"):
-        st.markdown(f"🤖 **Research Buddy:**  \n{formatted_response}", unsafe_allow_html=True)
+        st.markdown(f"🤖 **Research:**  \n{formatted_response}", unsafe_allow_html=True)
 
 # 📖 User Guide Section
 st.sidebar.markdown("## 📖 How to Use")
